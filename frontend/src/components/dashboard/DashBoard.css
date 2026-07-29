@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    background: #0d1117;
+    color: #f0f6fc;
+    font-family: "Asap", sans-serif;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 24px;
+    padding: 30px;
+    min-height: calc(100vh - 72px);
+    background: linear-gradient(180deg, #0d1117, #161b22);
+}
+
+.dashboard-card,
+.repositories-card {
+    background: rgba(22, 27, 34, 0.95);
+    border: 1px solid #30363d;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.35);
+}
+
+.dashboard-header {
+    margin-bottom: 28px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 2.3rem;
+    color: white;
+}
+
+.dashboard-header p {
+    margin-top: 8px;
+    color: #8b949e;
+    font-size: 1rem;
+}
+
+.repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    gap: 20px;
+}
+
+.repo-header h2 {
+    margin: 0;
+    color: white;
+}
+
+#search input {
+    width: 320px;
+    padding: 12px 18px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    transition: .3s;
+}
+
+#search input:focus {
+    border-color: #2ea043;
+    box-shadow: 0 0 0 3px rgba(46,160,67,.25);
+}
+
+.dashboard-card h3,
+.repositories-card h2 {
+    margin-top: 0;
+    color: white;
+}
+
+.repo-card {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 16px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+    border-color: #2ea043;
+    box-shadow: 0 12px 30px rgba(46,160,67,.18);
+}
+
+.repo-card h4 {
+    margin: 0;
+    color: #58a6ff;
+    font-size: 1.1rem;
+}
+
+.repo-card p {
+    margin-top: 10px;
+    color: #c9d1d9;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 14px;
+    transition: .3s;
+}
+
+ul li:hover {
+    border-color: #2ea043;
+    transform: translateX(5px);
+}
+
+ul li p {
+    margin: 0;
+    color: #c9d1d9;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #8b949e;
+}
+
+.empty-state h3 {
+    color: white;
+}
+
+.star-icon{
+    cursor:pointer;
+    color:#8b949e;
+    transition:.25s;
+    width:fit-content;
+}
+
+.star-icon:hover{
+    color:#2fa4cb;
+    transform:scale(1.1);
+}
+
+.repo-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.star-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.star-icon svg{
+    font-size:28px;
+}
+
+@media (max-width: 1100px) {
+
+    #dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .repo-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #search input {
+        width: 100%;
+    }
+
+}
