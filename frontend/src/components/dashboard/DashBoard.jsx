@@ -17,7 +17,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `54.79.187.233:3000/repo/user/${userId}`
+          `http://54.79.187.233:3000/repo/user/${userId}`
         );
         const data = await response.json();
         setRepositories(data.repositories);
@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch(`54.79.187.233:3000/repo/all`);
+        const response = await fetch(`http://54.79.187.233:3000/repo/all`);
         const data = await response.json();
         setSuggestedRepositories(data);
       } catch (err) {
