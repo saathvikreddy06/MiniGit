@@ -27,7 +27,7 @@ const CreateRepository = () => {
 
     try {
         const response = await axios.post(
-        "16.176.12.17:3000/repo/create",
+        "54.79.187.233:3000/repo/create",
         {
             name: repositoryName,
             description,
