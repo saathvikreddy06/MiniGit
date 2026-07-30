@@ -20,7 +20,7 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post("http://54.79.187.233:3000/login", {
+      const res = await axios.post("https://minigit-tu4w.onrender.com/login", {
         email: email,
         password: password,
       });

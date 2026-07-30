@@ -17,7 +17,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `http://54.79.187.233:3000/repo/user/${userId}`
+          `https://minigit-tu4w.onrender.com/${userId}`
         );
         const data = await response.json();
         setRepositories(data.repositories);
@@ -28,7 +28,7 @@ const Dashboard = () => {
 
     const fetchSuggestedRepositories = async () => {
       try {
-        const response = await fetch(`http://54.79.187.233:3000/repo/all`);
+        const response = await fetch(`https://minigit-tu4w.onrender.com/repo/all`);
         const data = await response.json();
         setSuggestedRepositories(data);
       } catch (err) {

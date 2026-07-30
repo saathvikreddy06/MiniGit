@@ -27,7 +27,7 @@ const CreateRepository = () => {
 
     try {
         const response = await axios.post(
-        "http://54.79.187.233:3000/repo/create",
+        "https://minigit-tu4w.onrender.com/repo/create",
         {
             name: repositoryName,
             description,

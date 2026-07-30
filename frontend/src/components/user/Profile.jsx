@@ -32,7 +32,7 @@ const Profile = () => {
       if (userId) {
         try {
           const response = await axios.get(
-            `http://54.79.187.233:3000/userProfile/${userId}`
+            `https://minigit-tu4w.onrender.com/userProfile/${userId}`
           );
           setUserDetails(response.data);
         } catch (err) {
