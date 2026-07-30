@@ -65,6 +65,10 @@ const Dashboard = () => {
     // Later replace this with your backend API call
   };
 
+  const filteredSuggestedRepositories = suggestedRepositories.filter(
+    (repo) => !repositories.some((myRepo) => myRepo._id === repo._id)
+  );
+
   return (
     <>
       <NavBar />
@@ -74,7 +78,7 @@ const Dashboard = () => {
         <aside className="dashboard-card">
           <h3 style={{marginBottom: "1rem"}}>Suggested Repositories</h3>
 
-          {suggestedRepositories.map((repo) => {
+          {filteredSuggestedRepositories.map((repo) => {
             return (
               <div className="repo-card" key={repo._id}>
                 <h4>{repo.name}</h4>
