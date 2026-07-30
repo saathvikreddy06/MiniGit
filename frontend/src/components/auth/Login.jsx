@@ -9,11 +9,6 @@ import logo from "../../assets/github-mark-white.svg";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-//   useEffect(() => {
-//     localStorage.removeItem("token");
-//     localStorage.removeItem("userId");
-//     setCurrentUser(null);
-//   });
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +20,7 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:3000/login", {
+      const res = await axios.post("16.176.12.17:3000/login", {
         email: email,
         password: password,
       });
