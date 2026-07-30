@@ -17,7 +17,7 @@ const Dashboard = () => {
     const fetchRepositories = async () => {
       try {
         const response = await fetch(
-          `https://minigit-tu4w.onrender.com/${userId}`
+          `https://minigit-tu4w.onrender.com/repo/user/${userId}`
         );
         const data = await response.json();
         setRepositories(data.repositories);
